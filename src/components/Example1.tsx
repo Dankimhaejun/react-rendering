@@ -29,17 +29,17 @@ function Parent({ children, lastChild }: ParentProps) {
 
 function ChildA() {
   console.log('ChildA is rendered')
-  return <div className="childA">A</div>
+  return <div className="childA"></div>
 }
 
 function ChildB() {
   console.log('ChildB is rendered')
-  return <div className="childB">B</div>
+  return <div className="childB"></div>
 }
 
 function ChildC() {
   console.log('ChildC is rendered')
-  return <div className="childC">C</div>
+  return <div className="childC"></div>
 }
 
 function useForceRender(interval: number) {
