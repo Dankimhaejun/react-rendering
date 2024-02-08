@@ -1,55 +1,26 @@
-import { useEffect, useState } from 'react'
 import './styles.css'
-
-type ParentProps = {
-  children: React.ReactNode
-  lastChild: React.ReactNode
-}
 
 function App() {
   return (
-    <Parent lastChild={<ChildC />}>
-      <ChildB />
-    </Parent>
+    <>
+      <div>React - Rendering</div>
+      <div>수동적인 렌더링</div>
+      <nav>
+        <ol>
+          <li>
+            <a href={`/example1`}>
+              모든 자식 컴포넌트가 동일하게 만들어지지 않을 때
+            </a>
+          </li>
+          <li>
+            <a href={`/contacts/2`}>
+              Context consumer는 provider가 렌더링 될 때마다 렌더링 됨
+            </a>
+          </li>
+        </ol>
+      </nav>
+    </>
   )
-}
-
-function Parent({ children, lastChild }: ParentProps) {
-  useForceRender(5000)
-  console.log('Parent is rendered')
-
-  return (
-    <div className="parent">
-      <ChildA />
-      {children}
-      {lastChild}
-    </div>
-  )
-}
-
-function ChildA() {
-  console.log('ChildA is rendered')
-  return <div className="childA">A</div>
-}
-
-function ChildB() {
-  console.log('ChildB is rendered')
-  return <div className="childB">B</div>
-}
-
-function ChildC() {
-  console.log('ChildC is rendered')
-  return <div className="childC">C</div>
-}
-
-function useForceRender(interval: number) {
-  const [tick, setTick] = useState(0)
-  useEffect(() => {
-    const id = setInterval(() => setTick((tick) => tick + 1), interval)
-    return () => clearInterval(id)
-  }, [interval])
-
-  return tick
 }
 
 export default App
