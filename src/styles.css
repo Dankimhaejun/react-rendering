@@ -1,0 +1,36 @@
+.App {
+  font-family: sans-serif;
+  text-align: center;
+}
+
+div {
+  text-align: center;
+}
+
+.parent {
+  width: 400px;
+  height: 400px;
+  background: #e0e0e0;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-direction: column;
+}
+
+.childA {
+  width: 100px;
+  height: 100px;
+  background: #daad86;
+}
+
+.childB {
+  width: 100px;
+  height: 100px;
+  background: #fbeec1;
+}
+
+.childC {
+  width: 100px;
+  height: 100px;
+  background: #bc986a;
+}
