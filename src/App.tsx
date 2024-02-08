@@ -13,8 +13,13 @@ function App() {
             </a>
           </li>
           <li>
-            <a href={`/contacts/2`}>
+            <a href={`/example2`}>
               Context consumer는 provider가 렌더링 될 때마다 렌더링 됨
+            </a>
+          </li>
+          <li>
+            <a href={`/example3`}>
+              렌더링 제외 기준은 각 컴포넌트 레벨에서 적용됨
             </a>
           </li>
         </ol>
